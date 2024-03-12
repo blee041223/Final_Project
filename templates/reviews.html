@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='review_styles.css') }}">
+</head>
+<body>
+    <h1>Book Reviews</h1>
+    <ul>
+        {% for review in reviews %}
+        <div class="review">
+            <li>
+                <strong>Title:</strong> {{ review[1] }}<br>
+                <strong>Author:</strong> {{ review[2] }}<br>
+                <strong>Rating:</strong> {{ review[3] }}<br>
+                <strong>Comment:</strong> {{ review[4] }}<br>
+            </li>
+        </div>
+        {% endfor %}
+
+        <a href="/" class="btn">Go back</a>
+    </ul>
+</body>
+</html>

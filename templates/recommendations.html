@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='recommendation_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Recommendations for {{ mood }}!</h1>
+        <a href="/" class="button">Go back</a>
+        <div id="recommendations">
+            {% for recommendation in recommendations %}
+                <div class="book">
+                    <img src="{{ recommendation.cover_image_url }}" alt="{{ recommendation.title }}">
+                    <h3>{{ recommendation.title }}</h3>
+                    <p><strong>Authors:</strong> {{ recommendation.authors }}</p>
+                    <p>{{ recommendation.description }}</p>
+                    <a href="{{ recommendation.purchase_link }}" class="btn" target="_blank">Buy Now</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+

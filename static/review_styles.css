@@ -1,0 +1,57 @@
+body {
+    margin: 0; 
+    padding: 0; 
+    background-color: #d4effa;
+    background: url('image/morning.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size:cover; 
+    background-size: cover;
+}
+
+h1 {
+    margin-top: 50px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    text-align: center; 
+    font-size: 60px
+}
+
+.review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 1000px;
+    height: 80px;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.btn {
+    margin: auto;
+    display: block;
+    background-color: hsl(318, 100%, 55%);
+    text-align: center;
+    color: #fff;
+    border: none;
+    width: 100px;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #ff914d;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find_Your_Fantasy</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index_styles.css') }}">
+</head>
+<body>
+    <p>Find Your Fantasy</p>
+    <form action="/recommendations" method="post">
+        <input type="text" name="mood" list="moods" placeholder="How are you feeling today?">
+        <input type="submit" value="Get recommendations">
+    </form>
+
+    <h3>Do you want to submit your review?</h3>
+    <a href="/input_review">Submit a Review</a>
+    <h3>Go to Review page!</h3>
+    <a href="/reviews">Review page</a>
+
+</body>
+</html>
+
